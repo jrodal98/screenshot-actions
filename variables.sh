@@ -6,6 +6,8 @@
 
 SCREENSHOT_DIR=$HOME/Pictures/
 ACTIONS_PATH=$HOME/.config/dunst/screenshot_actions.sh
+OCR_LANG="eng" # change this to your preferred language. use tesseract --list-langs to see your installed languages.
+
 ERROR_ICON=$HOME/.local/share/icons/dunst_icons/icons8-high-importance-48.png
 CAMERA_ICON=$HOME/.local/share/icons/dunst_icons/icons8-camera-100.png
 OCR_ICON=$HOME/.local/share/icons/dunst_icons/icons8-general-ocr-48.png
@@ -18,5 +20,5 @@ function play_sound() {
 }
 
 function send_error() {
-	notify-send -u critical -i "$ERROR_ICON" "Screenshot Actions Error" "$1"
+	dunstify -u critical -i "$ERROR_ICON" "Screenshot Actions Error" "$1"
 }

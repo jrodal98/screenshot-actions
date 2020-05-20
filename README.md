@@ -19,12 +19,12 @@ The tool is simple to install, configure, and use. See the instructions below. E
 
 ## Requirements
 
-* dunst
-* dmenu
-* xclip
-* zenity
-* tesseract-ocr
-    * additionally, training data for each language you use. English is the only one explicity supported in the script right now, but you could easily change this on your own (it would literally be one line of code to plug in your preferred language).
+* dunst (notification daemon)
+* dmenu (for selecting dunst actions)
+* xclip (for managing clipboard)
+* zenity (for saving/renaming files)
+* tesseract (for OCR)
+* tesseract-data-* (for OCR)
 * scrot, maim, or flameshot. Submit an issue request for support for other screenshot tools
 
 ## Installation/Setup instructions
@@ -34,6 +34,8 @@ Installation instructions for an arch based distribution are provided under the 
 ### Install required packages
 
 `sudo pacman -Syu dunst dmenu zenity xclip tesseract tesseract-data-eng`
+
+The above command assumes you which to use english OCR data. If you wish to have a different language, please refer to the aur page for tesseract.
 
 ### Install screenshot-actions
 
@@ -65,6 +67,7 @@ The icons and camera shutter variables are optional
 # required
 SCREENSHOT_DIR="path to screenshot directory"
 ACTIONS_PATH="path to the screenshot_actions.sh file (this variable shouldn't have to be changed)"
+OCR_LANG="OCR language code (eng for english)"
 
 # Optional
 

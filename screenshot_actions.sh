@@ -29,7 +29,7 @@ function delete() {
 }
 
 function ocr() {
-    xclip -o -selection clipboard -t image/png | tesseract stdin stdout | xclip -sel clip
+    xclip -o -selection clipboard -t image/png | tesseract -l $OCR_LANG stdin stdout | xclip -sel clip
     dunstify -i $OCR_ICON "Text copied to clipboard"
 
 }
@@ -43,7 +43,7 @@ function to_clip() {
         *)
             ;;
     esac
-    notify-send -i $CAMERA_ICON "Image $2 to clipboard"
+    dunstify -i $CAMERA_ICON "Image $2 to clipboard"
 }
 
 
