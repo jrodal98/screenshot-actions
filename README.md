@@ -33,7 +33,7 @@ Installation instructions for an arch based distribution are provided under the 
 
 ### Install required packages
 
-`sudo pacman -Syu dunst dmenu zenity tesseract tesseract-data-eng`
+`sudo pacman -Syu dunst dmenu zenity xclip tesseract tesseract-data-eng`
 
 ### Install screenshot-actions
 
