@@ -1,5 +1,7 @@
 # screenshot-actions
 
+![screenshot-tool](https://user-images.githubusercontent.com/35352333/82405961-50555280-9a33-11ea-8240-b690555afc85.gif)
+
 Dunst actions for screenshots. Current actions include:
 
 1) **clipboard mode**: works with screenshots that were saved to the clipboard
