@@ -7,11 +7,13 @@ Dunst actions for screenshots. Current actions include:
 1) **clipboard mode**: works with screenshots that were saved to the clipboard
     * Extract text from screenshot using **ocr**
     * **Save** screenshot stored in clipboard to an image file
+    * **Upload** screenshot to 0x0.st
 2) **file mode**: works with screenshots that were saved to a file
     * **Delete** screenshot
     * **Rename** screenshot
     * **Copy** screenshot to clipboard
     * **Move** screenshot to clipboard (deletes file)
+    * **Upload** screenshot to 0x0.st
 
 Currently supports scrot, maim, and flameshot. New screenshot tools can be added easily (see `screenshot.sh` configuration section).
 

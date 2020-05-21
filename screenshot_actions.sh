@@ -46,13 +46,27 @@ function to_clip() {
     dunstify -i $CAMERA_ICON "Image $2 to clipboard"
 }
 
+function upload_0x0() {
+    case $1 in
+        clipboard )
+            FILENAME=/tmp/screenshot-actions.png
+            xclip -o -selection clipboard -t image/png > $FILENAME
+            ;;
+        *)
+            FILENAME=$1
+            ;;
+    esac
+    URL=$(curl -F"file=@$FILENAME" http://0x0.st)
+    dunstify -i $CAMERA_ICON "Image uploaded to $URL"
+}
+
 
 case $1 in
     clipboard)
-        ACTION=$(play_sound & dunstify -A "saveas,save as" -A "ocr,ocr" -i $HOME/.local/share/icons/dunst_icons/icons8-camera-100.png "Screenshot" "Screenshot saved to clipboard")
+        ACTION=$(play_sound & dunstify -A "saveas,save as" -A "ocr,ocr" -A "upTo0x0,upload to 0x0.st" -i $HOME/.local/share/icons/dunst_icons/icons8-camera-100.png "Screenshot" "Screenshot saved to clipboard")
         ;;
     *)
-        ACTION=$(play_sound & dunstify -A "rename,rename" -A "delete,delete" -A "mvToClip,move to clipboard" -A "cpToClip,copy to clipboard" -i $HOME/.local/share/icons/dunst_icons/icons8-camera-100.png "Screenshot" "Screenshot saved to $1")
+        ACTION=$(play_sound & dunstify -A "rename,rename" -A "delete,delete" -A "mvToClip,move to clipboard" -A "cpToClip,copy to clipboard" -A "upTo0x0,upload to 0x0.st" -i $HOME/.local/share/icons/dunst_icons/icons8-camera-100.png "Screenshot" "Screenshot saved to $1")
         ;;
 esac
 
@@ -75,6 +89,8 @@ case "$ACTION" in
     "mvToClip")
         to_clip $1 moved
         ;;
-
+    "upTo0x0")
+        upload_0x0 $1
+        ;;
     esac
 
