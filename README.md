@@ -41,15 +41,17 @@ The above command assumes you which to use english OCR data. If you wish to have
 
 ### Install screenshot-actions
 
-Clone the repository and run `make install`.
+Clone the repository and run `./install.sh`.
 
-**Run `make install` anytime you modify any of the files!**
+**Run `./install.sh` anytime you modify any of the files!**
 
 ```bash
 git clone https://github.com/jrodal98/screenshot-actions.git
 cd screenshot-actions
-make install
+./install.sh
 ```
+
+If you get a "Permission denied" error, try running "chmod +x install.sh" and then run `./install.sh` again.
 
 **NOTE:** Icons and Flameshot aren't supported without configuration. Fear not, configuring the script is very simple.
 
@@ -169,4 +171,8 @@ You can see what keybinding triggers your context menu by looking at `context` v
 
 * Take a screenshot of the full display and save it to a file: `./screenshot.sh flameshot full`
 * Open the flameshot gui tool: `./screenshot.sh flameshot select`
+
+## Contributing
+
+I will accept pull requests on this repository for adding different screenshot tools to `screenshot.sh`, adding new actions to `screenshot_actions.sh`, reasonable refactoring of preexisting code, etc. Feel free to submit an issue request if there's a specific action you'd like to see. No guarantees, but if it sounds cool and sounds like something I'm capable of implementing, I might implement it.
 
