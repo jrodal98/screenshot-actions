@@ -41,14 +41,14 @@ The above command assumes you which to use english OCR data. If you wish to have
 
 ### Install screenshot-actions
 
-Clone the repository and run `make install`.
+Clone the repository and run `./install.sh`.
 
-**Run `make install` anytime you modify any of the files!**
+**Run `./install.sh` anytime you modify any of the files!**
 
 ```bash
 git clone https://github.com/jrodal98/screenshot-actions.git
 cd screenshot-actions
-make install
+./install.sh
 ```
 
 **NOTE:** Icons and Flameshot aren't supported without configuration. Fear not, configuring the script is very simple.
