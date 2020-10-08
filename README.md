@@ -51,6 +51,8 @@ cd screenshot-actions
 ./install.sh
 ```
 
+If you get a "Permission denied" error, try running "chmod +x install.sh" and then run `./install.sh` again.
+
 **NOTE:** Icons and Flameshot aren't supported without configuration. Fear not, configuring the script is very simple.
 
 **Make sure you set `SCREENSHOT_DIR` at the top of the `variables.sh` file or else your files won't end up where you want them!**
