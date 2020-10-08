@@ -170,3 +170,7 @@ You can see what keybinding triggers your context menu by looking at `context` v
 * Take a screenshot of the full display and save it to a file: `./screenshot.sh flameshot full`
 * Open the flameshot gui tool: `./screenshot.sh flameshot select`
 
+## Contributing
+
+I will accept pull requests on this repository for adding different screenshot tools to `screenshot.sh`, adding new actions to `screenshot_actions.sh`, reasonable refactoring of preexisting code, etc. Feel free to submit an issue request if there's a specific action you'd like to see. No guarantees, but if it sounds cool and sounds like something I'm capable of implementing, I might implement it.
+
